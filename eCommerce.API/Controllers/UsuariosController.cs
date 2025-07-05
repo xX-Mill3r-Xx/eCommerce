@@ -91,10 +91,10 @@ namespace eCommerce.API.Controllers
                     return BadRequest(Retorno.CampoObrigatorio("CPF"));
 
                 if (!IsValidEmail(usuario.Email))
-                    return BadRequest("Email deve ter um formato válido");
+                    return BadRequest(Retorno.EmailInvalido);
 
                 if (!IsValidCPF(usuario.CPF))
-                    return BadRequest("CPF deve ter um formato válido");
+                    return BadRequest(Retorno.CPFInvalido);
 
                 await _usuarioRepository.Inserir(usuario);
                 return CreatedAtAction(nameof(ObterPorId), new { id = usuario.Id }, usuario);
@@ -133,10 +133,10 @@ namespace eCommerce.API.Controllers
                     return BadRequest(Retorno.CampoObrigatorio("CPF"));
 
                 if (!IsValidEmail(usuario.Email))
-                    return BadRequest("Email deve ter um formato válido");
+                    return BadRequest(Retorno.EmailInvalido);
 
                 if (!IsValidCPF(usuario.CPF))
-                    return BadRequest("CPF deve ter um formato válido");
+                    return BadRequest(Retorno.CPFInvalido);
 
                 var atualizado = await _usuarioRepository.Atualizar(usuario);
                 if (!atualizado)

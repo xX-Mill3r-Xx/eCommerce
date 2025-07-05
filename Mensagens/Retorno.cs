@@ -8,6 +8,8 @@
         public static string IdDeveSerMaiorQueZero => "Id deve ser maior que zero.";
         public static string NomeNaoPodeSerVazio => "Nome não pode estar vazio";
         public static string DadosInseridosVazios => "Dados nao podem estar vazios.";
+        public static string EmailInvalido => "Email deve ter um formato válido";
+        public static string CPFInvalido => "CPF deve ter um formato válido";
 
         public static string CampoObrigatorio(string campo)
         {

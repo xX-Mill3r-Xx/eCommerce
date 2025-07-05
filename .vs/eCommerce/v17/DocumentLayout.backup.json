@@ -1,12 +1,55 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "X:\\CursoEFCore\\eCommerce\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E8BD08-B7FD-42D9-A917-966F5F2C4DFD}|eCommerce.API\\eCommerce.API.csproj|x:\\cursoefcore\\ecommerce\\ecommerce.api\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1E8BD08-B7FD-42D9-A917-966F5F2C4DFD}|eCommerce.API\\eCommerce.API.csproj|solutionrelative:ecommerce.api\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABD4706A-7484-46B7-9603-FD823233D3B9}|Mensagens\\Mensagens.csproj|x:\\cursoefcore\\ecommerce\\mensagens\\retorno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABD4706A-7484-46B7-9603-FD823233D3B9}|Mensagens\\Mensagens.csproj|solutionrelative:mensagens\\retorno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 186,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "X:\\CursoEFCore\\eCommerce\\eCommerce.API\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "eCommerce.API\\Controllers\\UsuariosController.cs",
+              "ToolTip": "X:\\CursoEFCore\\eCommerce\\eCommerce.API\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "eCommerce.API\\Controllers\\UsuariosController.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAmwIoAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T15:58:57.562Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Retorno.cs",
+              "DocumentMoniker": "X:\\CursoEFCore\\eCommerce\\Mensagens\\Retorno.cs",
+              "RelativeDocumentMoniker": "Mensagens\\Retorno.cs",
+              "ToolTip": "X:\\CursoEFCore\\eCommerce\\Mensagens\\Retorno.cs",
+              "RelativeToolTip": "Mensagens\\Retorno.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T15:59:55.687Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

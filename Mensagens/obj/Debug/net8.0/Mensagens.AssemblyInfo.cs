@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mensagens")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2042a3751cb5e1d74f462b3cbc85c6d89ae0b6f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d552e8fe750a1f8101edeaf18e4c689a6c445d53")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mensagens")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mensagens")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

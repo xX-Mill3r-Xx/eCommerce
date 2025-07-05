@@ -1,89 +1,131 @@
-﻿using eCommerce.Models;
-using Mensagens;
+﻿using eCommerce.API.Database;
+using Microsoft.EntityFrameworkCore;
 
 namespace eCommerce.API.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
         #region Properties
-        public static List<Usuario> _db = new List<Usuario>();
-        private static int _nextId = 1;
+        private readonly eCommerceContext _db;
         #endregion
 
         #region Constructors
-
+        public UsuarioRepository(eCommerceContext db)
+        {
+            _db = db;
+        }
         #endregion
 
-        public Task<IEnumerable<Usuario>> ObterTodos()
+        public async Task<IEnumerable<Usuario>> ObterTodos()
         {
-            return Task.FromResult(_db.AsEnumerable());
+            return await _db.Usuarios
+                .OrderBy(u => u.Id)
+                .ToListAsync();
         }
 
-        public Task<Usuario> ObterPorId(int id)
+        public async Task<Usuario?> ObterPorId(int id)
         {
             if (id <= 0)
-                return Task.FromResult<Usuario?>(null);
+                return null;
 
-            var usuario = _db.First(x => x.Id == id);
-            return Task.FromResult(usuario);
+            return await _db.Usuarios
+                .Include(u => u.Contato)
+                .Include(u => u.EnderecosEntrega)
+                .Include(u => u.Departamentos)
+                .FirstOrDefaultAsync(u => u.Id == id);
         }
 
-        public Task<Usuario> ObterPorNome(string nome)
+        public async Task<Usuario?> ObterPorNome(string nome)
         {
             if (string.IsNullOrWhiteSpace(nome))
-                //throw new ArgumentNullException(Retorno.RegistroNuloOuVazio, nameof(nome));
-                return Task.FromResult<Usuario?>(null);
+                return null;
 
-            var usuario = _db.FirstOrDefault(x => x.Nome?.Equals(nome, StringComparison.OrdinalIgnoreCase) == true);
-            return Task.FromResult(usuario);
+            return await _db.Usuarios
+                .Include(u => u.Contato)
+                .Include(u => u.EnderecosEntrega)
+                .Include(u => u.Departamentos)
+                .FirstOrDefaultAsync(u => u.Nome.Contains(nome));
         }
 
-        public Task Inserir(Usuario usuario)
-        {
-            if(usuario == null)
-                throw new ArgumentNullException(nameof(usuario));
-
-            if(usuario.Id == 0)
-                usuario.Id = _nextId++;
-            else
-            {
-                if (_db.Any(x => x.Id == usuario.Id))
-                    throw new InvalidOperationException(Retorno.RegistroJaExiste(usuario.Id));
-
-                if (usuario.Id >= _nextId)
-                    _nextId = usuario.Id + 1;
-            }
-
-            _db.Add(usuario);
-            return Task.CompletedTask;
-        }
-
-        public Task<bool> Atualizar(Usuario usuario)
+        public async Task Inserir(Usuario usuario)
         {
             if (usuario == null)
-                throw new ArgumentException(nameof(usuario));
+                throw new ArgumentNullException(nameof(usuario));
 
-            var usuarioExistente = _db.FirstOrDefault(x => x.Id == usuario.Id);
-            if(usuarioExistente == null)
-                return Task.FromResult(false);
+            var usuarioExistente = await _db.Usuarios
+                .FirstOrDefaultAsync(u => u.CPF == usuario.CPF);
 
-            _db.Remove(usuarioExistente);
-            _db.Add(usuario);
+            if (usuarioExistente != null)
+                throw new InvalidOperationException($"Já existe um usuário com o CPF {usuario.CPF}");
 
-            return Task.FromResult(true);
+            var emailExistente = await _db.Usuarios
+                .FirstOrDefaultAsync(u => u.Email == usuario.Email);
+
+            if (emailExistente != null)
+                throw new InvalidOperationException($"Já existe um usuário com o email {usuario.Email}");
+
+            if (usuario.DataCadastro == default)
+                usuario.DataCadastro = DateTimeOffset.Now;
+
+            if (string.IsNullOrWhiteSpace(usuario.SituacaoCadastro))
+                usuario.SituacaoCadastro = "Ativo";
+
+            await _db.Usuarios.AddAsync(usuario);
+            await _db.SaveChangesAsync();
         }
 
-        public Task<bool> Deletar(int id)
+        public async Task<bool> Atualizar(Usuario usuario)
         {
-            if(id <= 0)
-                return Task.FromResult(false);
+            if (usuario == null)
+                throw new ArgumentNullException(nameof(usuario));
 
-            var usuario = _db.FirstOrDefault(x => x.Id == id);
-            if(usuario == null)
-                return Task.FromResult(false);
+            var usuarioExistente = await _db.Usuarios
+                .FirstOrDefaultAsync(u => u.Id == usuario.Id);
 
-            _db.Remove(usuario);
-            return Task.FromResult(true);
+            if (usuarioExistente == null)
+                return false;
+
+            var cpfExistente = await _db.Usuarios
+                .FirstOrDefaultAsync(u => u.CPF == usuario.CPF && u.Id != usuario.Id);
+
+            if (cpfExistente != null)
+                throw new InvalidOperationException($"CPF {usuario.CPF} já está sendo usado por outro usuário");
+
+            var emailExistente = await _db.Usuarios
+                .FirstOrDefaultAsync(u => u.Email == usuario.Email && u.Id != usuario.Id);
+
+            if (emailExistente != null)
+                throw new InvalidOperationException($"Email {usuario.Email} já está sendo usado por outro usuário");
+
+            usuarioExistente.Nome = usuario.Nome;
+            usuarioExistente.Email = usuario.Email;
+            usuarioExistente.Sexo = usuario.Sexo;
+            usuarioExistente.RG = usuario.RG;
+            usuarioExistente.CPF = usuario.CPF;
+            usuarioExistente.NomeMae = usuario.NomeMae;
+            usuarioExistente.SituacaoCadastro = usuario.SituacaoCadastro;
+
+            _db.Usuarios.Update(usuarioExistente);
+            await _db.SaveChangesAsync();
+
+            return true;
+        }
+
+        public async Task<bool> Deletar(int id)
+        {
+            if (id <= 0)
+                return false;
+
+            var usuario = await _db.Usuarios
+                .FirstOrDefaultAsync(u => u.Id == id);
+
+            if (usuario == null)
+                return false;
+
+            _db.Usuarios.Remove(usuario);
+            await _db.SaveChangesAsync();
+
+            return true;
         }
     }
 }

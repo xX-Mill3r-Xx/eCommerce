@@ -1,5 +1,4 @@
 ﻿using eCommerce.API.Repositories;
-using eCommerce.Models;
 using Mensagens;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,18 +9,14 @@ namespace eCommerce.API.Controllers
     public class UsuariosController : ControllerBase
     {
         #region Properties
-
         private readonly IUsuarioRepository _usuarioRepository;
-
         #endregion
 
         #region Constructors
-
         public UsuariosController(IUsuarioRepository repository)
         {
             _usuarioRepository = repository;
         }
-
         #endregion
 
         [HttpGet]
@@ -43,7 +38,7 @@ namespace eCommerce.API.Controllers
         {
             try
             {
-                if(id <= 0)
+                if (id <= 0)
                     return BadRequest(Retorno.IdDeveSerMaiorQueZero);
 
                 var result = await _usuarioRepository.ObterPorId(id);
@@ -86,10 +81,20 @@ namespace eCommerce.API.Controllers
                 if (usuario == null)
                     return BadRequest(Retorno.DadosInseridosVazios);
 
-                string campo = "Nome Usuário";
-
                 if (string.IsNullOrWhiteSpace(usuario.Nome))
-                    return BadRequest(Retorno.CampoObrigatorio(campo));
+                    return BadRequest(Retorno.CampoObrigatorio("Nome"));
+
+                if (string.IsNullOrWhiteSpace(usuario.Email))
+                    return BadRequest(Retorno.CampoObrigatorio("Email"));
+
+                if (string.IsNullOrWhiteSpace(usuario.CPF))
+                    return BadRequest(Retorno.CampoObrigatorio("CPF"));
+
+                if (!IsValidEmail(usuario.Email))
+                    return BadRequest("Email deve ter um formato válido");
+
+                if (!IsValidCPF(usuario.CPF))
+                    return BadRequest("CPF deve ter um formato válido");
 
                 await _usuarioRepository.Inserir(usuario);
                 return CreatedAtAction(nameof(ObterPorId), new { id = usuario.Id }, usuario);
@@ -118,15 +123,30 @@ namespace eCommerce.API.Controllers
                 if (id != usuario.Id)
                     return BadRequest(Retorno.IdNaoCorrespondente);
 
-                string campo = "Nome Usuário";
                 if (string.IsNullOrWhiteSpace(usuario.Nome))
-                    return BadRequest(Retorno.CampoObrigatorio(campo));
+                    return BadRequest(Retorno.CampoObrigatorio("Nome"));
+
+                if (string.IsNullOrWhiteSpace(usuario.Email))
+                    return BadRequest(Retorno.CampoObrigatorio("Email"));
+
+                if (string.IsNullOrWhiteSpace(usuario.CPF))
+                    return BadRequest(Retorno.CampoObrigatorio("CPF"));
+
+                if (!IsValidEmail(usuario.Email))
+                    return BadRequest("Email deve ter um formato válido");
+
+                if (!IsValidCPF(usuario.CPF))
+                    return BadRequest("CPF deve ter um formato válido");
 
                 var atualizado = await _usuarioRepository.Atualizar(usuario);
                 if (!atualizado)
                     return NotFound(Retorno.RegistroNaoLocalizado);
 
                 return Ok(usuario);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(ex.Message);
             }
             catch (Exception ex)
             {
@@ -153,5 +173,33 @@ namespace eCommerce.API.Controllers
                 return StatusCode(500, CodigoStatus.ErroInterno(ex));
             }
         }
+
+        #region Métodos auxiliares
+        private static bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private static bool IsValidCPF(string cpf)
+        {
+            cpf = cpf.Replace(".", "").Replace("-", "").Replace(" ", "");
+
+            if (cpf.Length != 11)
+                return false;
+
+            if (cpf.All(c => c == cpf[0]))
+                return false;
+
+            return cpf.All(char.IsDigit);
+        }
+        #endregion
     }
 }

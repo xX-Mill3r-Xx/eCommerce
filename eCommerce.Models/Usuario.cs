@@ -11,10 +11,10 @@
         public string? NomeMae { get; set; }
         public string? SituacaoCadastro { get; set; }
         public DateTimeOffset DataCadastro { get; set; }
+        public Contato? Contato { get; set; }
 
         /*
             TODO - VINCULAR COM AS CLASSES
-            - CONTATO, 
             - ENDERECOENTREGA
             - DEPARTAMENTO
          */

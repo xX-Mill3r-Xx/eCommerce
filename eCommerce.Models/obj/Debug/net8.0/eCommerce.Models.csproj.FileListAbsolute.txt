@@ -1,0 +1,12 @@
+X:\CursoEFCore\eCommerce\eCommerce.Models\bin\Debug\net8.0\eCommerce.Models.deps.json
+X:\CursoEFCore\eCommerce\eCommerce.Models\bin\Debug\net8.0\eCommerce.Models.dll
+X:\CursoEFCore\eCommerce\eCommerce.Models\bin\Debug\net8.0\eCommerce.Models.pdb
+X:\CursoEFCore\eCommerce\eCommerce.Models\obj\Debug\net8.0\eCommerce.Models.GeneratedMSBuildEditorConfig.editorconfig
+X:\CursoEFCore\eCommerce\eCommerce.Models\obj\Debug\net8.0\eCommerce.Models.AssemblyInfoInputs.cache
+X:\CursoEFCore\eCommerce\eCommerce.Models\obj\Debug\net8.0\eCommerce.Models.AssemblyInfo.cs
+X:\CursoEFCore\eCommerce\eCommerce.Models\obj\Debug\net8.0\eCommerce.Models.csproj.CoreCompileInputs.cache
+X:\CursoEFCore\eCommerce\eCommerce.Models\obj\Debug\net8.0\eCommerce.Models.sourcelink.json
+X:\CursoEFCore\eCommerce\eCommerce.Models\obj\Debug\net8.0\eCommerce.Models.dll
+X:\CursoEFCore\eCommerce\eCommerce.Models\obj\Debug\net8.0\refint\eCommerce.Models.dll
+X:\CursoEFCore\eCommerce\eCommerce.Models\obj\Debug\net8.0\eCommerce.Models.pdb
+X:\CursoEFCore\eCommerce\eCommerce.Models\obj\Debug\net8.0\ref\eCommerce.Models.dll

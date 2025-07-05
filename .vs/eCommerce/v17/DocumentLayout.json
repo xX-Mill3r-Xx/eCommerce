@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "X:\\CursoEFCore\\eCommerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE69A672-7ACC-494A-9D4D-A7D5EBE62C41}|eCommerce.Models\\eCommerce.Models.csproj|x:\\cursoefcore\\ecommerce\\ecommerce.models\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE69A672-7ACC-494A-9D4D-A7D5EBE62C41}|eCommerce.Models\\eCommerce.Models.csproj|solutionrelative:ecommerce.models\\contato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE69A672-7ACC-494A-9D4D-A7D5EBE62C41}|eCommerce.Models\\eCommerce.Models.csproj|x:\\cursoefcore\\ecommerce\\ecommerce.models\\departamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE69A672-7ACC-494A-9D4D-A7D5EBE62C41}|eCommerce.Models\\eCommerce.Models.csproj|solutionrelative:ecommerce.models\\departamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE69A672-7ACC-494A-9D4D-A7D5EBE62C41}|eCommerce.Models\\eCommerce.Models.csproj|x:\\cursoefcore\\ecommerce\\ecommerce.models\\enderecoentrega.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE69A672-7ACC-494A-9D4D-A7D5EBE62C41}|eCommerce.Models\\eCommerce.Models.csproj|solutionrelative:ecommerce.models\\enderecoentrega.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CE69A672-7ACC-494A-9D4D-A7D5EBE62C41}|eCommerce.Models\\eCommerce.Models.csproj|x:\\cursoefcore\\ecommerce\\ecommerce.models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE69A672-7ACC-494A-9D4D-A7D5EBE62C41}|eCommerce.Models\\eCommerce.Models.csproj|solutionrelative:ecommerce.models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E8BD08-B7FD-42D9-A917-966F5F2C4DFD}|eCommerce.API\\eCommerce.API.csproj|x:\\cursoefcore\\ecommerce\\ecommerce.api\\database\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1E8BD08-B7FD-42D9-A917-966F5F2C4DFD}|eCommerce.API\\eCommerce.API.csproj|solutionrelative:ecommerce.api\\database\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E8BD08-B7FD-42D9-A917-966F5F2C4DFD}|eCommerce.API\\eCommerce.API.csproj|x:\\cursoefcore\\ecommerce\\ecommerce.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F1E8BD08-B7FD-42D9-A917-966F5F2C4DFD}|eCommerce.API\\eCommerce.API.csproj|solutionrelative:ecommerce.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EnderecoEntrega.cs",
-              "DocumentMoniker": "X:\\CursoEFCore\\eCommerce\\eCommerce.Models\\EnderecoEntrega.cs",
-              "RelativeDocumentMoniker": "eCommerce.Models\\EnderecoEntrega.cs",
-              "ToolTip": "X:\\CursoEFCore\\eCommerce\\eCommerce.Models\\EnderecoEntrega.cs",
-              "RelativeToolTip": "eCommerce.Models\\EnderecoEntrega.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T00:29:59.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Contato.cs",
-              "DocumentMoniker": "X:\\CursoEFCore\\eCommerce\\eCommerce.Models\\Contato.cs",
-              "RelativeDocumentMoniker": "eCommerce.Models\\Contato.cs",
-              "ToolTip": "X:\\CursoEFCore\\eCommerce\\eCommerce.Models\\Contato.cs",
-              "RelativeToolTip": "eCommerce.Models\\Contato.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T00:29:55.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Departamento.cs",
-              "DocumentMoniker": "X:\\CursoEFCore\\eCommerce\\eCommerce.Models\\Departamento.cs",
-              "RelativeDocumentMoniker": "eCommerce.Models\\Departamento.cs",
-              "ToolTip": "X:\\CursoEFCore\\eCommerce\\eCommerce.Models\\Departamento.cs",
-              "RelativeToolTip": "eCommerce.Models\\Departamento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T00:28:55.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Usuario.cs",
               "DocumentMoniker": "X:\\CursoEFCore\\eCommerce\\eCommerce.Models\\Usuario.cs",
               "RelativeDocumentMoniker": "eCommerce.Models\\Usuario.cs",
               "ToolTip": "X:\\CursoEFCore\\eCommerce\\eCommerce.Models\\Usuario.cs",
               "RelativeToolTip": "eCommerce.Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T00:08:33.707Z",
+              "WhenOpened": "2025-07-05T12:13:31.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "eCommerceContext.cs",
+              "DocumentMoniker": "X:\\CursoEFCore\\eCommerce\\eCommerce.API\\Database\\eCommerceContext.cs",
+              "RelativeDocumentMoniker": "eCommerce.API\\Database\\eCommerceContext.cs",
+              "ToolTip": "X:\\CursoEFCore\\eCommerce\\eCommerce.API\\Database\\eCommerceContext.cs",
+              "RelativeToolTip": "eCommerce.API\\Database\\eCommerceContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T11:55:19.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "X:\\CursoEFCore\\eCommerce\\eCommerce.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "eCommerce.API\\appsettings.Development.json",
+              "ToolTip": "X:\\CursoEFCore\\eCommerce\\eCommerce.API\\appsettings.Development.json",
+              "RelativeToolTip": "eCommerce.API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-05T11:54:27.52Z",
               "EditorCaption": ""
             }
           ]

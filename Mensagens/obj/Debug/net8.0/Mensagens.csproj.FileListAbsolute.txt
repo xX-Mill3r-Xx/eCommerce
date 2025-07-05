@@ -1,0 +1,12 @@
+X:\CursoEFCore\eCommerce\Mensagens\bin\Debug\net8.0\Mensagens.deps.json
+X:\CursoEFCore\eCommerce\Mensagens\bin\Debug\net8.0\Mensagens.dll
+X:\CursoEFCore\eCommerce\Mensagens\bin\Debug\net8.0\Mensagens.pdb
+X:\CursoEFCore\eCommerce\Mensagens\obj\Debug\net8.0\Mensagens.GeneratedMSBuildEditorConfig.editorconfig
+X:\CursoEFCore\eCommerce\Mensagens\obj\Debug\net8.0\Mensagens.AssemblyInfoInputs.cache
+X:\CursoEFCore\eCommerce\Mensagens\obj\Debug\net8.0\Mensagens.AssemblyInfo.cs
+X:\CursoEFCore\eCommerce\Mensagens\obj\Debug\net8.0\Mensagens.csproj.CoreCompileInputs.cache
+X:\CursoEFCore\eCommerce\Mensagens\obj\Debug\net8.0\Mensagens.sourcelink.json
+X:\CursoEFCore\eCommerce\Mensagens\obj\Debug\net8.0\Mensagens.dll
+X:\CursoEFCore\eCommerce\Mensagens\obj\Debug\net8.0\refint\Mensagens.dll
+X:\CursoEFCore\eCommerce\Mensagens\obj\Debug\net8.0\Mensagens.pdb
+X:\CursoEFCore\eCommerce\Mensagens\obj\Debug\net8.0\ref\Mensagens.dll

@@ -1,4 +1,6 @@
-# Projeto eCommerce - Estudos sobre API com ASP.NET Core e Entity Framework Core
+# Projeto eCommerce
+
+### Estudos sobre API com ASP.NET Core e Entity Framework Core
 
 Este projeto é um repositório de estudos focado na criação de APIs utilizando ASP.NET Core e Entity Framework Core. O objetivo principal é aprofundar o conhecimento no desenvolvimento de APIs robustas e escaláveis, explorando as melhores práticas e recursos oferecidos por essas tecnologias.
 

@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "X:\\CursoEFCore\\eCommerce\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E8BD08-B7FD-42D9-A917-966F5F2C4DFD}|eCommerce.API\\eCommerce.API.csproj|x:\\cursoefcore\\ecommerce\\ecommerce.api\\database\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1E8BD08-B7FD-42D9-A917-966F5F2C4DFD}|eCommerce.API\\eCommerce.API.csproj|solutionrelative:ecommerce.api\\database\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1E8BD08-B7FD-42D9-A917-966F5F2C4DFD}|eCommerce.API\\eCommerce.API.csproj|x:\\cursoefcore\\ecommerce\\ecommerce.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F1E8BD08-B7FD-42D9-A917-966F5F2C4DFD}|eCommerce.API\\eCommerce.API.csproj|solutionrelative:ecommerce.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 186,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "X:\\CursoEFCore\\eCommerce\\eCommerce.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "eCommerce.API\\appsettings.Development.json",
+              "ToolTip": "X:\\CursoEFCore\\eCommerce\\eCommerce.API\\appsettings.Development.json",
+              "RelativeToolTip": "eCommerce.API\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-05T16:43:10.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "eCommerceContext.cs",
+              "DocumentMoniker": "X:\\CursoEFCore\\eCommerce\\eCommerce.API\\Database\\eCommerceContext.cs",
+              "RelativeDocumentMoniker": "eCommerce.API\\Database\\eCommerceContext.cs",
+              "ToolTip": "X:\\CursoEFCore\\eCommerce\\eCommerce.API\\Database\\eCommerceContext.cs",
+              "RelativeToolTip": "eCommerce.API\\Database\\eCommerceContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T16:40:09.648Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
